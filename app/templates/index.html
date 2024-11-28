@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 </head>
 <body>
-    <header class="bg-gray-800 text-white text-center py-10">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl font-bold">Hello, I'm Kunal Bajaj.</h1>
-            <p class="mt-4 text-lg italic">"A technologist with a passion for solving real-world problems, Add...."</p>
+    <header class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 text-white shadow-lg">
+        <nav class="py-4 sticky top-0 z-50 backdrop-blur-lg bg-opacity-80 bg-gray-800">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <a href="/" class="text-2xl font-extrabold hover:text-blue-300 transition-all">Kunal's Portfolio</a>
+                <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden lg:flex space-x-6">
+                    <li><a href="#about" class="hover:text-blue-300 transition-all text-lg">About</a></li>
+                    <li><a href="#experience" class="hover:text-blue-300 transition-all text-lg">Experience</a></li>
+                    <li><a href="#contact" class="hover:text-blue-300 transition-all text-lg">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-center py-20">
+            <h1 class="text-5xl font-extrabold tracking-tight drop-shadow-lg">
+                Hello, I'm <span class="text-yellow-300">Kunal Bajaj</span>.
+            </h1>
+            <p class="mt-4 text-xl italic text-gray-200">
+                "A technologist with a passion for solving real-world problems."
+            </p>
         </div>
     </header>
     
+    
+    
     <main class="max-w-4xl mx-auto mt-10 px-4">
-        <section>
-            <h2 class="text-3xl font-semibold border-b pb-2 mb-6">Experience</h2>
-            <div class="grid grid-cols-1 gap-6"></div>
+        <section id="about" class="mb-10 bg-gradient-to-br from-gray-100 to-gray-50 p-6 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                I am a passionate software developer with expertise in machine learning, backend systems, and mobile app development.
+            </p>
+        </section>
+        
+        <section id="experience" class="bg-white shadow-md rounded-lg p-6 mb-10 hover:bg-blue-50 transition-transform transform hover:scale-105">
+            <h2 class="text-4xl font-bold border-b pb-2 mb-6 text-gray-800">Experience</h2>
+            <div class="grid grid-cols-1 gap-6">
                 {% for exp in experiences %}
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h3 class="text-xl font-bold">{{ exp.title }}</h3>
+                <div class="bg-gradient-to-r from-gray-100 to-gray-200 shadow-md rounded-lg p-6 hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-bold">{{ exp.title }}</h3>
                     <p class="text-gray-600"><strong>{{ exp.company }}</strong> | <em>{{ exp.period }}</em></p>
                     <ul class="mt-4 space-y-2">
                         {% for detail in exp.details %}
@@ -34,9 +63,11 @@
         </section>
     </main>
     
-    <footer class="bg-gray-800 text-white text-center py-4">
+    
+    <footer id="contact" class="bg-gray-800 text-white text-center py-4">
         <p>Contact: kunalbajaj20220@gmail.com | <a href="https://linkedin.com/kunal-bajaj1/" class="text-blue-400 hover:underline">LinkedIn</a></p>
     </footer>
     
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
 </body>
 </html>

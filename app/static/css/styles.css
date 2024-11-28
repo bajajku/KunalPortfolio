@@ -1,0 +1,224 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+header .welcome-section h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header .welcome-section p {
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-section {
+    margin-top: 2em;
+}
+
+.experience-section h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+.experience-card {
+    background-color: #fff;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.experience-card p {
+    margin: 0.5em 0;
+    color: #555;
+}
+
+.experience-card ul {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+footer a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+/* General Styles */
+body {
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Header Section */
+.header-section {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    animation: gradient-move 5s infinite alternate;
+}
+
+.header-section h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Card Hover Effect */
+div.bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.bg-white:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Link Hover */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Styles */
+footer {
+    font-size: 0.875rem;
+}
+
+/* Navigation Bar */
+/* Navigation Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: rgba(31, 41, 55, 0.9); /* Darker gray with blur */
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #93c5fd; /* Light blue */
+}
+
+/* Header Hero Section */
+header {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero Heading & Subtitle */
+header h1 {
+    animation: textBounce 1.5s infinite ease-in-out;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* Keyframes for Hero Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Hamburger Menu Styles */
+#menu-btn {
+    transition: transform 0.3s ease;
+}
+
+#menu-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Transitions */
+section {
+    padding: 2rem 0;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
